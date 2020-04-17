@@ -24,17 +24,86 @@
                         <a href="#" class="nav-link active">Home</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">User Guide</a>
+                        <a href="/guide.html" class="nav-link">User Guide</a>
                     </li>
                     <li class="navbar-item">
-                        <a href="#" class="nav-link">About</a>
+                        <a href="/About.html" class="nav-link">About</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <div class="jumbotron">
-            
+
         </div>
+        <section>
+            <p class="lead">
+                Coronavirus disease (COVID-19) is an infectious 
+                disease caused by a newly discovered coronavirus.
+                Most people who fall sick with COVID-19 will experience mild to 
+                moderate symptoms and recover without special treatment.
+                The virus that causes COVID-19 is mainly transmitted through 
+                droplets generated when an infected person coughs, sneezes, 
+                or exhales. These droplets are too heavy to hang in the air, 
+                and quickly fall on floors or surfaces.
+                The impact of Covid-19 on the ecomomomy is devastating causing all 
+                sector of the economy to be on lockdown.
+            </p>
+            <p class="lead">Covid-19 Estimator provide us the opportunity to estimate the impact 
+                of this virus on the ecomomomy and predict possible cases of infection 
+                within a spcified period of time.<br>
+                <button class="btn btn-info btn-lg">Estimate Now!</button>
+            </p>
+        </section>
+        <div class="form">
+            <form>
+                <div class="field">
+                    <span>Information</span>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="region">Region:</label>
+                            <input type="text" placeholder="Enter Region" name="region" class="form-control">
+                            <label for="country">Country:</label>
+                            <input type="text" name="country" placeholder="Enter country" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="age">Average Age of Population:</label>
+                            <input type="text" name="age" placeholder="Enter Agerage Age" class="form-control">
+                            <label for="dailyIncome">Average Daily Income ($US):</label>
+                            <input type="text" name="dailyIncome" placeholder="Average Daily income in $US" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="populationIncome">Population Average Daily Income (%):</label>
+                            <input type="text" name="populationIncome" placeholder="Population Daily Income in %" class="form-control">
+                            <label for="population">Population Size:</label>
+                            <input type="text" name="population" placeholder="Enter Poulation" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cases">Reported Cases:</label>
+                            <input type="text" name="cases" placeholder="Reported cases of Covid-19" class="form-control">
+                            <label for="beds">Hospital Bed Capacity:</label>
+                            <input type="text" name="beds" placeholder="Enter Hospital bed capacity" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="period">Choose Estimation Period Type:</label><br>
+                            <select name="period" id="">
+                                <option value="">Days</option>
+                                <option value="">Weeks</option>
+                                <option value="">Months</option>
+                                <option value="">Years</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="time">Estimation Period Range:</label>
+                            <input type="text" name="time" placeholder="Enter No of Days/weeks/months/years" class="form-control">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg">Get Estimation</button>
+                </div>
+            </form>
+        </div>
+        <footer>
+            <p>Copyright &copy; 2020 XpressIT. All Rights Reserved.</p>
+        </footer>
     </div>
 
     <script src="/BootStrap/js/jquery-3.4.1.min.js"></script>
