@@ -33,7 +33,8 @@ const showResult = ()=>{
   const svent = document.querySelector('.sVent');
   const idolla = document.querySelector('.iFlt');
   const sdolla = document.querySelector('.sFlt');
-
+  const topic = document.querySelector('.heading');
+  //parsing values to the table 
   imc.innerHTML=result.impact.currentlyInfected;
   sci.innerHTML=result.severeImpact.currentlyInfected;
   iIRT.innerHTML= result.impact.infectedByRequestedTime;
@@ -42,13 +43,15 @@ const showResult = ()=>{
   scase.innerHTML = result.severeImpact.severeCasesByRequestedTime;
   ibed.innerHTML = result.impact.hospitalBedsByRequestedTime;
   sbed.innerHTML = result.severeImpact.hospitalBedsByRequestedTime;
+  result.severeImpact.hospitalBedsByRequestedTime < 0 ? sbed.style.color='red': sbed.style.color='black';
+  result.impact.hospitalBedsByRequestedTime < 0 ? ibed.style.color = 'red': ibed.style.color = 'black';
   iIcu.innerHTML = result.impact.casesForICUByRequestedTime;
   sIcu.innerHTML = result.severeImpact.casesForICUByRequestedTime;
   ivent.innerHTML = result.impact.casesForVentilatorsByRequestedTime;
   svent.innerHTML = result.severeImpact.casesForVentilatorsByRequestedTime;
   idolla.innerHTML = result.impact.dollarsInFlight;
   sdolla.innerHTML = result.severeImpact.dollarsInFlight;
-
+  topic.innerHTML += data.timeToElapse + data.periodType +' in '+data.region.country;
 };
 use.addEventListener('click', (e) => {
     e.preventDefault();

@@ -1,3 +1,119 @@
+ body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.imglead{
+    position: absolute;
+}
+#banner p{
+    border: 2px solid #d7e2eeb6;
+    position: relative;
+    padding: 25px;
+    text-align: justify;
+    width: 95%;
+    margin: 0px auto;
+    top: -40px;
+    border-radius: 10px;
+    background: #d7e2eeb6;
+}
+#now{
+    background: #003380;
+    margin: 10px 0px 5px 0px;
+}
+.info form{
+    border:2px solid gray;
+    padding:10px;
+    border-radius: 7px;
+    font-size: 1.4em;
+    background-color:rgba(214, 209, 194, 0.37);
+    margin:5px 5px 15px 5px;
+}
+hr{
+    margin-top: 5px;
+    font-size:20px;
+}   
+#resultdiv{
+    margin:15px ; 
+}
+.result{
+    font-size:1.3em;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+.result td, .result th{
+    border:1px solid rgb(209, 194, 194);
+    padding:15px;
+}
+.result tr:nth-child(even){
+    background: rgba(214, 209, 194, 0.37);
+    margin:10px 5px;
+}
+.result tr:hover{
+    background: rgb(200, 200, 221);
+}
+.result th{
+    padding-top:12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color:rgba(49, 7, 7, 0.24);
+    color:#fff; 
+}
+.howTo{
+    padding: 16px;
+    text-align: justify;
+    background-color: rgb(247, 247, 199);
+    border-radius: 10px;
+}
+.howTo h4, .method h4{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+   
+}
+.method{
+    padding: 15px;
+    text-align: justify;
+    border-left: 1px solid #0c0c0c;
+    margin-left: 5px;
+    background-color: rgb(247, 247, 199);
+    border-radius: 10px;
+}
+footer{
+    background-color: #66b0ff;
+    color:#fff;
+    height: 45px;
+    text-align: center;
+    padding: 5px 0px;
+    margin-right: 0px;
+    margin-left:0px;
+    color:#0c0c0c;
+}
+/********CSS file for the guide page*************/
+#user-guide{
+    width: 95%;
+    background:rgba(241, 167, 167, 0.548);
+    padding:15px;
+    border-radius: 5px;
+    margin:10px auto;
+}
+#user-guide p{
+    text-align: center;
+}
+/**************************About Page CSS Styling ************/
+.description{
+    width: 95%;
+    padding:15px;
+    border-radius: 5px;
+    margin:10px auto;
+}
+#quote{
+    width:65%;
+    margin:3px auto;
+    background-color:rgba(252, 225, 225, 0.548);
+    padding:15px;
+    border-radius: 5px;
+}
 .hide{
     display: none;
 }

@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Description" content="Covid19 Estimator Developed by Mr. Francis Ogbonna">
-    <link rel="stylesheet" href="/BootStrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/Fontawsome/css/all.min.css">
-    <link rel="stylesheet" href="/src/css/index.css">
+    <link rel="stylesheet" type="text/css" href="/BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/cases" href="/Fontawsome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/index.css">
     <title>Covid-19 Estimator</title>
 </head>
 <body>
     <div class="container">
         <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
-            <a href="#" class="navbar-brand">
+            <a href="#" class="navbar-brand" aria-label="navbar-icon">
                 <img src="/src/img/logo.png" alt="">
                 Covid-19 Estimator
             </a>
-            <button class="navbar-toggler" name="toggler" data-toggle="collapse" data-target="#navcontent">
+            <button class="navbar-toggler" aria-label="toggler-button" data-toggle="collapse" data-target="#navcontent">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navcontent">
@@ -33,10 +33,10 @@
                 </ul>
             </div>
         </nav>
-        <div class="jumbotron">
-
+        <div class="">
+            <img src="/src/img/covid-image.jpg" alt="" width="100%" height="397px" class="fluid coro">
         </div>
-        <section>
+        <section id="banner">
             <p class="lead">
                 Coronavirus disease (COVID-19) is an infectious 
                 disease caused by a newly discovered coronavirus.
@@ -47,18 +47,17 @@
                 or exhales. These droplets are too heavy to hang in the air, 
                 and quickly fall on floors or surfaces.
                 The impact of Covid-19 on the ecomomomy is devastating causing all 
-                sector of the economy to be on lockdown.
-            </p>
-            <p class="lead">Covid-19 Estimator provide us the opportunity to estimate the impact 
+                sector of the economy to be on lockdown. <br>
+                Covid-19 Estimator provide us the opportunity to estimate the impact 
                 of this virus on the ecomomomy and predict possible cases of infection 
                 within a spcified period of time.<br>
                 <button class="btn btn-info btn-lg" id="now">Estimate Now!</button>
             </p>
+            
         </section>
         <div class="info hide">
             <form>
                 <div class="field">
-                    <span>Information</span>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="region">Region:</label>
@@ -106,8 +105,7 @@
         </div>
         <div id="resultdiv" class="hide">
             <hr>
-            <h4 class="text-center">Result from the estimation</h4>
-            <h3>Impact estimation for the period of 2weeks</h3>
+            <h3 class="text-center heading">Result Showing Impact Estimation of Covid-19 for a Period of </h3>
             <table class="result">
                 <tr>
                     <th>-</th>
@@ -152,7 +150,7 @@
             </table>
             <div class="caution">
                 <div class="row">
-                    <div class="col md-6">
+                    <div class="col md-6 howTo">
                         <h4>How the virus spreed</h4>
                         <p class="lead">
                             The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, 
@@ -161,7 +159,7 @@
                              who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.
                         </p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 method">
                         <h4>Prevention Method</h4>
                         <p class="lead">
                             Protect yourself and others around you by knowing the facts and taking appropriate precautions.
@@ -181,11 +179,10 @@
                 </div>
             </div>
         </div>
-        <footer>
+        <footer class="bg-primary">
             <p>Copyright &copy; 2020 XpressIT. All Rights Reserved.</p>
         </footer>
     </div>
-
     <script src="/BootStrap/js/jquery-3.4.1.min.js"></script>
     <script src="/BootStrap/js/bootstrap.bundle.min.js"></script>
     <script src="/Fontawsome/js/all.min.js"></script>
