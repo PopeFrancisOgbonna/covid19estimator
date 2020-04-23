@@ -81,6 +81,7 @@ estimate.addEventListener('click', (e) => {
         }
         return b;
     }
+    warn.style.color = 'red';
   const y = (reg === '' || ctry === '' || !parseInt(age) || !parseInt(usd) || !Number(inc));
   const x = (!parseInt(pop) || !parseInt(beds) || !parseInt(time) || !parseInt(rCase));
   if(x || y){
