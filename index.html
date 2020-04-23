@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="Covid19 Estimator Developed by Mr. Francis Ogbonna">
+    <link rel="stylesheet" type="text/css" href="/BootStrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/cases" href="/Fontawsome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/src/css/index.css">
+    <title>Covid-19 Estimator</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-dark navbar-expand-lg bg-primary">
+            <a href="#" class="navbar-brand" aria-label="navbar-icon">
+                <img src="/src/img/logo.png" alt="">
+                Covid-19 Estimator
+            </a>
+            <button class="navbar-toggler" aria-label="toggler-button" data-toggle="collapse" data-target="#navcontent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navcontent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-item">
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/guide.html" class="nav-link">User Guide</a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="/About.html" class="nav-link">About</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="">
+            <img src="/src/img/covid-image.jpg" alt="" width="100%" height="397px" class="fluid coro">
+        </div>
+        <section id="banner">
+            <p class="lead">
+                Coronavirus disease (COVID-19) is an infectious 
+                disease caused by a newly discovered coronavirus.
+                Most people who fall sick with COVID-19 will experience mild to 
+                moderate symptoms and recover without special treatment.
+                The virus that causes COVID-19 is mainly transmitted through 
+                droplets generated when an infected person coughs, sneezes, 
+                or exhales. These droplets are too heavy to hang in the air, 
+                and quickly fall on floors or surfaces.
+                The impact of Covid-19 on the ecomomomy is devastating causing all 
+                sector of the economy to be on lockdown. <br>
+                Covid-19 Estimator provide us the opportunity to estimate the impact 
+                of this virus on the ecomomomy and predict possible cases of infection 
+                within a spcified period of time.<br>
+                <button class="btn btn-info btn-lg" id="now">Estimate Now!</button>
+            </p>
+            
+        </section>
+        <div class="info hide">
+            <form>
+                <div class="field">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="region">Region:</label>
+                            <input type="text" placeholder="Enter Region" id="region" name="region" class="form-control">
+                            <label for="country">Country:</label>
+                            <input type="text" name="country" id="country" placeholder="Enter country" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="age">Average Age of Population:</label>
+                            <input type="text" name="age" id="age" placeholder="Enter Agerage Age" class="form-control">
+                            <label for="dailyIncome">Average Daily Income ($US):</label>
+                            <input type="text" name="dailyIncome" id="USD" placeholder="Average Daily income in $US" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="populationIncome">Population Average Daily Income (%):</label>
+                            <input type="text" name="populationIncome" id="income" placeholder="Population Daily Income in %" class="form-control">
+                            <label for="population">Population Size:</label>
+                            <input type="text" name="population" id="ptn" placeholder="Enter Poulation" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cases">Reported Cases:</label>
+                            <input type="text" name="cases" id="rptd" placeholder="Reported cases of Covid-19" class="form-control">
+                            <label for="beds">Hospital Bed Capacity:</label>
+                            <input type="text" name="beds" id="hbd" placeholder="Enter Hospital bed capacity" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="period">Choose Estimation Period Type:</label><br>
+                            <select name="period" id="period">
+                                <option value="days">Days</option>
+                                <option value="Weeks">Weeks</option>
+                                <option value="Months">Months</option>
+                                <option value="Years">Years</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="time">Estimation Period Range:</label>
+                            <input type="text" name="time" id="time" placeholder="Enter No of Days/weeks/months/years" class="form-control">
+                        </div>
+                        <span class="warning"></span>
+                    </div>
+                    <button class="btn btn-primary btn-lg" id="getest">Get Estimation</button>
+                    <button class="btn btn-danger btn-lg" id="canc">Cancel</button>
+                </div>
+            </form>
+        </div>
+        <div id="resultdiv" class="hide">
+            <hr>
+            <h3 class="text-center heading">Result Showing Impact Estimation of Covid-19 for a Period of </h3>
+            <table class="result">
+                <tr>
+                    <th>-</th>
+                    <th>Mild Impact</th>
+                    <th>Severe Impact</th>
+                </tr>
+                <tr>
+                    <td>Currently Infected Person(s)</td>
+                    <td class="ici"></td>
+                    <td class="sci"></td>
+                </tr>
+                <tr>
+                    <td>Expected Infection</td>
+                    <td class="iBRT"></td>
+                    <td class="siBRT"></td>
+                </tr>
+                <tr>
+                    <td>Expected Severe Cases</td>
+                    <td class="isBRT"></td>
+                    <td class="sSBRT"></td>
+                </tr>
+                <tr>
+                    <td>Expected Available Hospital Beds</td>
+                    <td class="ibed"></td>
+                    <td class="sbed"></td>
+                </tr>
+                <tr>
+                    <td>Persons Expected on Intensieve Care</td>
+                    <td class="iIcu"></td>
+                    <td class="sIcu"></td>
+                </tr>
+                <tr>
+                    <td>Expected Ventilator Requirement</td>
+                    <td class="iVent"></td>
+                    <td class="sVent"></td>
+                </tr>
+                <tr>
+                    <td>Expected Income Loss</td>
+                    <td class="iFlt"></td>
+                    <td class="sFlt"></td>
+                </tr>
+            </table>
+            <div class="caution">
+                <div class="row">
+                    <div class="col md-6 howTo">
+                        <h4>How the virus spreed</h4>
+                        <p class="lead">
+                            The virus that causes COVID-19 is mainly transmitted through droplets generated when an infected person coughs, 
+                            sneezes, or exhales. These droplets are too heavy to hang in the air, and quickly fall on floors or surfaces.
+                             You can be infected by breathing in the virus if you are within close proximity of someone 
+                             who has COVID-19, or by touching a contaminated surface and then your eyes, nose or mouth.
+                        </p>
+                    </div>
+                    <div class="col-md-6 method">
+                        <h4>Prevention Method</h4>
+                        <p class="lead">
+                            Protect yourself and others around you by knowing the facts and taking appropriate precautions.
+                            Follow advice provided by your local public health agency.
+                            To prevent the spread of COVID-19:
+                            <ol>
+                                <li>Clean your hands often. Use soap and water, or an alcohol-based hand rub.</li>
+                                <li>Maintain a safe distance from anyone who is coughing or sneezing</li>
+                                <li>Don’t touch your eyes, nose or mouth</li>
+                                <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
+                                <li>Stay home if you feel unwell.</li>
+                                <li>If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.</li>
+                                <li>Follow the directions of your local health authority.</li>
+                            </ol>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="bg-primary">
+            <p>Copyright &copy; 2020 XpressIT. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script src="/BootStrap/js/jquery-3.4.1.min.js"></script>
+    <script src="/BootStrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/Fontawsome/js/all.min.js"></script>
+    <script src="/src/js/index.js"></script>
+</body>
+</html>
